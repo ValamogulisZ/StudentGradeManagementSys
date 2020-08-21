@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work 4</title>
+</head>
+<body>
+    <h1>Welcome to student midterm grade manage system</h1>
+
+    <h2>Add item</h2>
+    <form method="post" style="border: solid black 1px">
+        {{add_form.hidden_tag()}}
+        {{add_form.name.label}}{{add_form.name}}
+        <br>
+        {{add_form.grade.label}}{{add_form.grade}}
+        <br>
+        {{add_form.submit1()}}
+    </form>
+
+    <h2>Delete item</h2>
+    <form method="post" style="border: black solid 1px">
+        {{del_form.hidden_tag()}}
+        {{del_form.stu_id.label}}{{del_form.stu_id}}
+        <br>
+        {{del_form.submit2()}}
+    </form>
+
+    <h2>Check items</h2>
+    <form method="post" style="border: black solid 1px">
+        {{vie_form.hidden_tag()}}
+        {{vie_form.view_way.label}}{{vie_form.view_way}}
+        <br>
+        {{vie_form.submit3()}}
+    </form>
+
+    <!-- bonus point -->
+    <h2>Update items (bonus point)</h2>
+    <form method="post" style="border: black solid 1px">
+        {{cha_form.hidden_tag()}}
+        {{cha_form.change_stu_id.label}}{{cha_form.change_stu_id}}
+        <br>
+        {{cha_form.new_grade.label}}{{cha_form.new_grade()}}
+        <br>
+        {{cha_form.submit4()}}
+    </form>
+
+</body>
+</html>
